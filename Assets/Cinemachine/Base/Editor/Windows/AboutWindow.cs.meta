@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 829e606f890b35c47aa29643517add2e
+timeCreated: 1481654956
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 79898
+  packageName: Cinemachine
+  packageVersion: 2.1.10
+  assetPath: Assets/Cinemachine/Base/Editor/Windows/AboutWindow.cs
+  uploadId: 215735

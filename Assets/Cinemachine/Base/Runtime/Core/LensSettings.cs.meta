@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 5778d22ca832d9f47b5e73a8c5fe78a2
+timeCreated: 1481654955
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 79898
+  packageName: Cinemachine
+  packageVersion: 2.1.10
+  assetPath: Assets/Cinemachine/Base/Runtime/Core/LensSettings.cs
+  uploadId: 215735

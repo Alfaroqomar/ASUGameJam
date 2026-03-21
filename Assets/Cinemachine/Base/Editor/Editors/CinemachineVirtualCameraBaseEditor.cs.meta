@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 211d719bb25901043833928f50e9d0ea
+timeCreated: 1506603196
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 79898
+  packageName: Cinemachine
+  packageVersion: 2.1.10
+  assetPath: Assets/Cinemachine/Base/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs
+  uploadId: 215735

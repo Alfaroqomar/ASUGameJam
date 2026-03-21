@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: b2f73bdc979030e419f33c10913639cc
+timeCreated: 1510078351
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 79898
+  packageName: Cinemachine
+  packageVersion: 2.1.10
+  assetPath: Assets/Cinemachine/Base/Runtime/Core/CinemachineComponentBase.cs
+  uploadId: 215735

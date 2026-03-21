@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 2a15a1e455bcc7543872f50762449739
+timeCreated: 1502028239
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 79898
+  packageName: Cinemachine
+  packageVersion: 2.1.10
+  assetPath: Assets/Cinemachine/Base/Editor/Editors/CinemachineScreenComposerGuides.cs
+  uploadId: 215735

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0d832c901796201458d7c595a98a0242
+timeCreated: 1490729325
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 79898
+  packageName: Cinemachine
+  packageVersion: 2.1.10
+  assetPath: Assets/Cinemachine/LICENSE
+  uploadId: 215735

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: aceb1a3f85f55c249bba6eaade29f2aa
+timeCreated: 1484415513
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 79898
+  packageName: Cinemachine
+  packageVersion: 2.1.10
+  assetPath: Assets/Cinemachine/Base/Editor/Windows/CinemachineColliderPrefs.cs
+  uploadId: 215735
