@@ -74,6 +74,9 @@ public class DialogManager : MonoBehaviour
     private string currentPassageName;
     private bool AnimatingText;
     private Color defaultArrowColor;
+    private RectTransform arrowRect;
+    private Vector2 defaultArrowPos;
+    private Tween arrowTween;
 
     private void Awake()
     {
@@ -181,6 +184,8 @@ public class DialogManager : MonoBehaviour
         DialogText = Viewport.transform.Find("DialogText").GetComponent<TextMeshProUGUI>();
         DialogArrow = Viewport.transform.Find("DialogArrow").gameObject;
         defaultArrowColor = DialogArrow.GetComponent<Image>().color;
+        arrowRect = DialogArrow.GetComponent<RectTransform>();
+        defaultArrowPos = arrowRect.localPosition;
 
         GameState.Instance.StartingGame();
 
@@ -196,22 +201,40 @@ public class DialogManager : MonoBehaviour
         Passage currentPassage = Passages.FirstOrDefault(p => p.name == passageName);
         print("Activating passage: " + passageName);
         print("Passage text: " + currentPassage.text);
+        currentPassageName = passageName;
         DisplayPassage(currentPassage);
 
     }
 
     public void DialogBoxClicked()
     {
+        print("Dialog box clicked");
         if (currentPassageName == null)
         {
             return;
         }
+
+        if (AnimatingText)
+        {
+            AnimatingText = false;
+            return;
+        }
+
+        print("playing next passage");
+        Passage currentPassage = Passages.FirstOrDefault(p => p.name == currentPassageName);
+        if (currentPassage.next != null)
+        {
+            ActivateDialog(currentPassage.next.name);
+            currentPassageName = currentPassage.next.name;
+        }
+
 
     }
 
     private void DisplayPassage(Passage passage)
     {
         DialogText.text = passage.text;
+        resetArrowPos();
         Coroutine textAnimation = StartCoroutine(TextAnimationCoro(DialogText));
         myCoroutines.Add(textAnimation);
     }
@@ -222,19 +245,46 @@ public class DialogManager : MonoBehaviour
         DialogArrow.GetComponent<Image>().color = defaultArrowColor;
         string fullText = textObj.text; // Cache the full text
         textObj.text = ""; // Start with empty text
-        DialogArrow.transform.DOKill(); // Stop any existing animations on the arrow
+        //get num of tweens on arrow
+
+        //print(DOTween.TweensByTarget(DialogArrow.transform).Count);
+
+        if (arrowTween != null && arrowTween.IsActive())
+        {
+            arrowTween.Kill();
+        }
 
         for (int i = 0; i < fullText.Length; i++)
         {
+            if (!AnimatingText)
+            {
+                textObj.text = fullText; // If animation was stopped, set full text immediately
+                break; // Exit the coroutine
+            }
+            //could check if character is [ then check if characters after = a keyword like wait, then could do stuff with it
             textObj.text += fullText[i]; // Add one character at a time
-            //if (!scrolled) { scrollRect.verticalNormalizedPosition = 0f; } // Auto-scroll to bottom
+            
             yield return new WaitForSeconds(waitTime); //should be 0.05f
         }
 
+
         AnimatingText = false;
-        DialogArrow.transform.DOLocalMoveY(-2f, 0.5f).SetLoops(-1, LoopType.Yoyo);
+        resetArrowPos(); // Reset arrow position before starting animation
+        arrowTween = arrowRect
+        .DOLocalMoveY(defaultArrowPos.y + 5f, 0.5f)
+        .SetLoops(-1, LoopType.Yoyo);
+
+        //DialogArrow.transform.DOLocalMoveY(defaultArrowPos.y + 5f, 0.5f).SetLoops(-1, LoopType.Yoyo).OnComplete(() =>
+        //{
+        //    DialogArrow.transform.localPosition = defaultArrowPos; // Reset position when animation completes
+        //});
         DialogArrow.GetComponent<Image>().color = Color.black;
         onComplete?.Invoke(); // Invoke the onComplete action if provided
+    }
+
+    private void resetArrowPos()
+    {
+        DialogArrow.transform.localPosition = defaultArrowPos; // Reset position before starting animation
     }
 
 
