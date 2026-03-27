@@ -6,7 +6,6 @@ public class CameraController : MonoBehaviour
     [Header("Targeting")]
     [SerializeField] private Transform target;
     [SerializeField] private Vector2 baseOffset = new Vector2(0, 0);
-    [SerializeField] private Vector2 offsetWhenDownIsHeld = new Vector2(0, -5);
     [SerializeField] private Vector2 deadzone = new Vector2(10, 10);
     [SerializeField] private Vector2 softzone = new Vector2(500, 500);
 
@@ -24,8 +23,7 @@ public class CameraController : MonoBehaviour
     }
 
     Vector3 CalculateCameraPosition() {
-        Vector2 offset = (Input.GetAxis("Vertical") < -0.5) ? offsetWhenDownIsHeld : baseOffset;
-        Vector3 goalPosition = target.position + new Vector3(offset.x, offset.y, 0);
+        Vector3 goalPosition = target.position + new Vector3(baseOffset.x, baseOffset.y, 0);
         Vector3 currentPosition = transform.position;
 
         float deltaX = Mathf.Abs(goalPosition.x - currentPosition.x);
