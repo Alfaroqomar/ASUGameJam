@@ -19,7 +19,8 @@ public class PlatformerWindowTestSetup : MonoBehaviour
 {
     [Header("Settings")]
     [SerializeField] private int renderWidth = 600;
-    [SerializeField] private int renderHeight = 600;
+    [SerializeField] private int renderHeight = 400;
+    [SerializeField] private float bounceSpeed = 150f;
     [SerializeField] private Color panelBackgroundColor = new Color(0.1f, 0.1f, 0.1f, 0.95f);
     [SerializeField] private Color buttonColor = new Color(0.2f, 0.4f, 0.6f, 1f);
 
@@ -112,14 +113,21 @@ public class PlatformerWindowTestSetup : MonoBehaviour
         panel.transform.SetParent(parent, false);
 
         RectTransform panelRect = panel.AddComponent<RectTransform>();
-        panelRect.anchorMin = new Vector2(0.1f, 0.05f);
-        panelRect.anchorMax = new Vector2(0.9f, 0.95f);
-        panelRect.offsetMin = Vector2.zero;
-        panelRect.offsetMax = Vector2.zero;
+        // Center anchors for bouncing movement
+        panelRect.anchorMin = new Vector2(0.5f, 0.5f);
+        panelRect.anchorMax = new Vector2(0.5f, 0.5f);
+        panelRect.pivot = new Vector2(0.5f, 0.5f);
+        // Fixed size: render width x (render height + title bar)
+        panelRect.sizeDelta = new Vector2(renderWidth + 10, renderHeight + 50);
+        panelRect.anchoredPosition = Vector2.zero;
 
         // Background
         Image panelBg = panel.AddComponent<Image>();
         panelBg.color = panelBackgroundColor;
+
+        // Add DVD bounce effect
+        DVDBounceEffect bounce = panel.AddComponent<DVDBounceEffect>();
+        bounce.SetSpeed(bounceSpeed);
 
         // Title Bar
         GameObject titleBar = new GameObject("TitleBar");

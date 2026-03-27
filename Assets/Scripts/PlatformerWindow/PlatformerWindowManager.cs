@@ -136,12 +136,6 @@ public class PlatformerWindowManager : MonoBehaviour
             openButton.SetActive(false);
         }
 
-        // Disable main camera
-        if (mainCamera != null)
-        {
-            mainCamera.enabled = false;
-        }
-
         if (isPlatformingSceneLoaded)
         {
             // Scene already preloaded, just enable it
@@ -212,16 +206,12 @@ public class PlatformerWindowManager : MonoBehaviour
             Debug.Log("[PlatformerWindowManager] Platformer camera enabled: " + enabled);
         }
 
-        // Disable main camera when platformer is open so we don't see the offset scene
+        // Main camera keeps running - VN doesn't pause during platforming
+        // The platformer renders to a texture in a floating window
         if (mainCamera != null && mainCamera != platformerCamera)
         {
-            mainCamera.enabled = !enabled;
             // Ensure far clip plane is limited so it won't see offset scene
-            if (!enabled)
-            {
-                mainCamera.farClipPlane = Mathf.Min(mainCamera.farClipPlane, 100f);
-            }
-            Debug.Log("[PlatformerWindowManager] Main camera enabled: " + !enabled);
+            mainCamera.farClipPlane = Mathf.Min(mainCamera.farClipPlane, 100f);
         }
 
         // Enable/disable player controls
