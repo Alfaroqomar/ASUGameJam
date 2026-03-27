@@ -186,9 +186,7 @@ public class DialogManager : MonoBehaviour
         defaultArrowColor = DialogArrow.GetComponent<Image>().color;
         arrowRect = DialogArrow.GetComponent<RectTransform>();
         defaultArrowPos = arrowRect.localPosition;
-
-        GameState.Instance.StartingGame();
-
+        StartCoroutine(GameState.Instance.StartingGame());
     }
 
     void Update()
