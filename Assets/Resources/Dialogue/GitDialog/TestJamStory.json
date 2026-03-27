@@ -20,12 +20,28 @@
       ]
     },
     {
-      "text": "I'm looking for a specific book. Could you help me?",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore\n[[ZanyCharacter3]]",
+      "links": [
+        {
+          "name": "ZanyCharacter3",
+          "link": "ZanyCharacter3",
+          "pid": "3"
+        }
+      ],
       "name": "ZanyCharacter2",
       "pid": "2",
       "position": {
         "x": "800",
         "y": "475"
+      }
+    },
+    {
+      "text": "I'm looking for a specific book, could you help me?",
+      "name": "ZanyCharacter3",
+      "pid": "3",
+      "position": {
+        "x": "800",
+        "y": "600"
       },
       "tags": [
         "BookQuery"
