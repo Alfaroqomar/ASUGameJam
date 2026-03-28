@@ -27,7 +27,7 @@ public class GameState : MonoBehaviour
     public Ease WalkXEase = Ease.InOutSine;
     public Ease WalkYEase = Ease.InOutBack;
     public Ease ColorEase = Ease.InQuart;
-
+    public bool Debug = true;
 
     private void Awake()
     {
@@ -46,6 +46,11 @@ public class GameState : MonoBehaviour
 
     void Start()
     {
+        Debug = true;
+        if (Debug)
+        {
+            TravelTime = 0.5f;
+        }
         //wait for 1 second before activating the dialog to ensure that the DialogManager has initialized
         Canvas = GameObject.Find("Canvas");
         WindowMask = Canvas.transform.Find("WindowMask").gameObject;
@@ -61,15 +66,15 @@ public class GameState : MonoBehaviour
     public void NewNPCEnters(string NPCName)
     {
 
-
-        float TravelTime = 3f;
-
         print(Person.name);
         PersonImage.color = Color.black;
         PersonImage.DOColor(new Color(1, 1, 1, 1), TravelTime).SetEase(ColorEase); //fade in the person
         Person.transform.localPosition = new Vector2(PersonOriginalPosition.x, PersonDownPos);
         Person.transform.DOLocalMoveY(PersonStandingPos, TravelTime/WalkLoops).SetEase(WalkYEase).SetLoops((int)WalkLoops, LoopType.Yoyo);
-        Person.transform.DOLocalMoveX(0, TravelTime).SetEase(WalkXEase);
+        Person.transform.DOLocalMoveX(0, TravelTime).SetEase(WalkXEase).onComplete = () =>
+        {
+            DialogManager.Instance.ActivateDialog(NPCName);
+        };
     }
 
 
@@ -81,7 +86,7 @@ public class GameState : MonoBehaviour
         }
 
         NewNPCEnters("ZanyCharacter");
-        DialogManager.Instance.ActivateDialog("ZanyCharacter");
+        //DialogManager.Instance.ActivateDialog("ZanyCharacter");
     }
 
 }
