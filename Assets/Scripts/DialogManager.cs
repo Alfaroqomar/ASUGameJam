@@ -13,6 +13,7 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 using static DialogManager;
 using Image = UnityEngine.UI.Image;
+using Toggle = UnityEngine.UI.Toggle;
 
 public class DialogManager : MonoBehaviour
 {
@@ -50,6 +51,11 @@ public class DialogManager : MonoBehaviour
             }
         }
 
+    }
+
+    public class Book
+    {
+        public List<BookGenre> genres;
     }
 
     List<BookGenre> bookGenres;
@@ -110,6 +116,10 @@ public class DialogManager : MonoBehaviour
     private GameObject DropdownObj;
     private TMP_Dropdown Dropdown;
 
+    private List<BookGenre> foundBookGenres;
+    private GameObject bookTemplate;
+    private GameObject tablet;
+
     private void Awake()
     {
         if (Instance == null)
@@ -167,7 +177,7 @@ public class DialogManager : MonoBehaviour
         foreach (Passage passage in Passages)
         {
 
-            if (passage.tags.Contains("Optionasdasds"))
+            if (passage.tags.Contains("Optionasdasds")) //ignoring this for now
             {
                 print("Setting option passages for " + passage.name);
             }
@@ -204,6 +214,7 @@ public class DialogManager : MonoBehaviour
 
         }
 
+
         defaultWaitTime = 0.025f;
         waitTime = defaultWaitTime;
 
@@ -218,9 +229,12 @@ public class DialogManager : MonoBehaviour
         defaultArrowPos = arrowRect.localPosition;
         Writer = DialogText.GetComponent<TMPWriter>();
 
+        tablet = Canvas.transform.Find("Tablet").gameObject;
         DropdownObj = Canvas.transform.Find("Tablet/Dropdown").gameObject;
         Dropdown = DropdownObj.GetComponent<TMP_Dropdown>();
 
+        foundBookGenres = new List<BookGenre>();
+        bookTemplate = tablet.transform.Find("BookContainer/BookTemplate").gameObject;
 
         bookGenres = new List<BookGenre>()
         {
@@ -295,6 +309,43 @@ public class DialogManager : MonoBehaviour
 
     }
 
+    public void DropDownValueChanged()
+    {
+        foundBookGenres.Clear();
+        if (DropdownObj.transform.Find("Dropdown List"))
+        {
+            print("Dropdown List found");
+            //loop thru children of list
+            foreach (Transform child in DropdownObj.transform.Find("Dropdown List/Viewport/Content"))
+            {
+                // if child is "Viewport"
+                // if toggle component is on and gameobject name contains a genre name, add to found genres list
+                Toggle childToggle = child.GetComponent<Toggle>();
+                if (childToggle.isOn)
+                {
+                    foreach (BookGenre genre in bookGenres)
+                    {
+                        if (child.name.ToLower().Contains(genre.name.ToLower()) && !foundBookGenres.Contains(genre))
+                        {
+                            foundBookGenres.Add(genre);
+                            print("Added " + genre.name + " to found genres");
+
+                            print("Current found genres: " + string.Join(", ", foundBookGenres.Select(g => g.name)));
+                        }
+                    }
+                }
+            }
+
+            GameObject TemplateParent = bookTemplate.transform.parent.gameObject;
+
+
+        } else
+        {
+            print("Dropdown List not found");
+            return;
+        }
+    }
+
     private void DisplayPassage(Passage passage)
     {
         DialogText.text = ProcessText(passage.text);
@@ -306,10 +357,13 @@ public class DialogManager : MonoBehaviour
     private String ProcessText(String text)
     {
         //replace all mentions of a genre with a random genre from the list of genres
-        text = text.ToLower();
+        //this might ignore lower, should use index
         foreach (BookGenre genre in bookGenres)
         {
-            text = text.Replace(genre.name.ToLower(), genre.TextString);
+            if (text.ToLower().Contains(genre.name.ToLower()))
+            {
+                text = text.Replace(genre.name, genre.TextString);
+            }
         }
         return text;
     }
