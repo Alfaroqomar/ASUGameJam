@@ -1,0 +1,18 @@
+{
+  "passages": [
+    {
+      "text": "",
+      "name": "Untitled Passage",
+      "pid": "1",
+      "position": {
+        "x": "800",
+        "y": "350"
+      }
+    }
+  ],
+  "name": "Untitled Story",
+  "startnode": "1",
+  "creator": "Tweego",
+  "creator-version": "2.1.1+81d1d71",
+  "ifid": "C5FB83E0-D0F9-42C7-B7A1-0574428A977E"
+}
