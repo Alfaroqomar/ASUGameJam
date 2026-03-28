@@ -13,6 +13,7 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 using static DialogManager;
 using Image = UnityEngine.UI.Image;
+using Toggle = UnityEngine.UI.Toggle;
 
 public class DialogManager : MonoBehaviour
 {
@@ -110,6 +111,8 @@ public class DialogManager : MonoBehaviour
     private GameObject DropdownObj;
     private TMP_Dropdown Dropdown;
 
+    private List<BookGenre> foundBookGenres;
+
     private void Awake()
     {
         if (Instance == null)
@@ -167,7 +170,7 @@ public class DialogManager : MonoBehaviour
         foreach (Passage passage in Passages)
         {
 
-            if (passage.tags.Contains("Optionasdasds"))
+            if (passage.tags.Contains("Optionasdasds")) //ignoring this for now
             {
                 print("Setting option passages for " + passage.name);
             }
@@ -204,6 +207,8 @@ public class DialogManager : MonoBehaviour
 
         }
 
+
+
         defaultWaitTime = 0.025f;
         waitTime = defaultWaitTime;
 
@@ -221,6 +226,7 @@ public class DialogManager : MonoBehaviour
         DropdownObj = Canvas.transform.Find("Tablet/Dropdown").gameObject;
         Dropdown = DropdownObj.GetComponent<TMP_Dropdown>();
 
+        foundBookGenres = new List<BookGenre>();
 
         bookGenres = new List<BookGenre>()
         {
@@ -293,6 +299,39 @@ public class DialogManager : MonoBehaviour
         }
 
 
+    }
+
+    public void DropDownValueChanged()
+    {
+        foundBookGenres.Clear();
+        if (DropdownObj.transform.Find("Dropdown List"))
+        {
+            print("Dropdown List found");
+            //loop thru children of list
+            foreach (Transform child in DropdownObj.transform.Find("Dropdown List/Viewport/Content"))
+            {
+                // if child is "Viewport"
+                // if toggle component is on and gameobject name contains a genre name, add to found genres list
+                Toggle childToggle = child.GetComponent<Toggle>();
+                if (childToggle.isOn)
+                {
+                    foreach (BookGenre genre in bookGenres)
+                    {
+                        if (child.name.ToLower().Contains(genre.name.ToLower()) && !foundBookGenres.Contains(genre))
+                        {
+                            foundBookGenres.Add(genre);
+                            print("Added " + genre.name + " to found genres");
+
+                            print("Current found genres: " + string.Join(", ", foundBookGenres.Select(g => g.name)));
+                        }
+                    }
+                }
+            }
+        } else
+        {
+            print("Dropdown List not found");
+            return;
+        }
     }
 
     private void DisplayPassage(Passage passage)

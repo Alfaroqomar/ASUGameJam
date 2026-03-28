@@ -28,6 +28,7 @@ public class GameState : MonoBehaviour
     public Ease WalkYEase = Ease.InOutBack;
     public Ease ColorEase = Ease.InQuart;
     public bool Debug = true;
+    private bool personInFrame = false;
 
     private void Awake()
     {
@@ -67,6 +68,7 @@ public class GameState : MonoBehaviour
     {
 
         print(Person.name);
+        personInFrame = true;
         PersonImage.color = Color.black;
         PersonImage.DOColor(new Color(1, 1, 1, 1), TravelTime).SetEase(ColorEase); //fade in the person
         Person.transform.localPosition = new Vector2(PersonOriginalPosition.x, PersonDownPos);
@@ -75,6 +77,25 @@ public class GameState : MonoBehaviour
         {
             DialogManager.Instance.ActivateDialog(NPCName);
         };
+    }
+
+    public void NPCLeaves()
+    {
+
+        PersonImage.color = Color.white;
+        PersonImage.DOColor(new Color(0, 0, 0, 1), TravelTime / WalkLoops).SetEase(ColorEase).onComplete = () =>
+        {
+            PersonImage.color = Color.white;
+        };
+        Person.transform.localPosition = new Vector2(Person.transform.localPosition.x, PersonStandingPos);
+        Person.transform.DOLocalMoveY(PersonDownPos, TravelTime / WalkLoops).SetEase(WalkYEase).SetLoops((int)WalkLoops, LoopType.Yoyo);
+        Person.transform.DOLocalMoveX(-PersonOriginalPosition.x, TravelTime).SetEase(WalkXEase).onComplete = () =>
+        {
+            Person.transform.localPosition = PersonOriginalPosition;
+            personInFrame = false;
+            //trigger next npc
+        };
+
     }
 
 
