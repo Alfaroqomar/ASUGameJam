@@ -6,7 +6,7 @@
         {
           "name": "Johnny2",
           "link": "Johnny2",
-          "pid": "2"
+          "pid": "12"
         }
       ],
       "name": "Johnny",
@@ -17,16 +17,169 @@
       }
     },
     {
+      "text": "<color=#26F7FD>Johnny:</color> <sketchy>Of course!</sketchy>\n[[Johnny11]]",
+      "links": [
+        {
+          "name": "Johnny11",
+          "link": "Johnny11",
+          "pid": "3"
+        }
+      ],
+      "name": "Johnny10",
+      "pid": "2",
+      "position": {
+        "x": "800",
+        "y": "3725"
+      }
+    },
+    {
+      "text": "<color=#26F7FD>Johnny:</color> I'd love to learn about <color=orange>THE HUMAN <shake>EXPERIENCE!</shake></color>\n[[Johnny12]]",
+      "links": [
+        {
+          "name": "Johnny12",
+          "link": "Johnny12",
+          "pid": "4"
+        }
+      ],
+      "name": "Johnny11",
+      "pid": "3",
+      "position": {
+        "x": "800",
+        "y": "3850"
+      }
+    },
+    {
+      "text": "<color=#26F7FD>Johnny:</color> I wonder why <color=orange>humans</color> loooove ice cream.\n[[Johnny13]]",
+      "links": [
+        {
+          "name": "Johnny13",
+          "link": "Johnny13",
+          "pid": "5"
+        }
+      ],
+      "name": "Johnny12",
+      "pid": "4",
+      "position": {
+        "x": "800",
+        "y": "3975"
+      }
+    },
+    {
+      "text": "<color=#26F7FD>Johnny:</color> I wonder why humans breed dogs to be weaker and stupider.\n[[Johnny14]]",
+      "links": [
+        {
+          "name": "Johnny14",
+          "link": "Johnny14",
+          "pid": "6"
+        }
+      ],
+      "name": "Johnny13",
+      "pid": "5",
+      "position": {
+        "x": "800",
+        "y": "4100"
+      }
+    },
+    {
+      "text": "<color=#26F7FD>Johnny:</color> In fact, I really wonder where <sketch>babies come from.</sketch>\n[[You4]]",
+      "links": [
+        {
+          "name": "You4",
+          "link": "You4",
+          "pid": "24"
+        }
+      ],
+      "name": "Johnny14",
+      "pid": "6",
+      "position": {
+        "x": "800",
+        "y": "4225"
+      }
+    },
+    {
+      "text": "<color=#26F7FD>Johnny:</color> I'm down for any recommendations ya got!\n[[Johnny16]]",
+      "links": [
+        {
+          "name": "Johnny16",
+          "link": "Johnny16",
+          "pid": "8"
+        }
+      ],
+      "name": "Johnny15",
+      "pid": "7",
+      "position": {
+        "x": "800",
+        "y": "4475"
+      }
+    },
+    {
+      "text": "<color=#26F7FD>Johnny:</color> Though honestly-- to keep it lowkey.\n[[Johnny17]]",
+      "links": [
+        {
+          "name": "Johnny17",
+          "link": "Johnny17",
+          "pid": "9"
+        }
+      ],
+      "name": "Johnny16",
+      "pid": "8",
+      "position": {
+        "x": "800",
+        "y": "4600"
+      }
+    },
+    {
+      "text": "<color=#26F7FD>Johnny:</color> I really want something that could make me feel <color=red><wave>LIKE A BADASS!</wave></color>\n[[Johnny18]]",
+      "links": [
+        {
+          "name": "Johnny18",
+          "link": "Johnny18",
+          "pid": "10"
+        }
+      ],
+      "name": "Johnny17",
+      "pid": "9",
+      "position": {
+        "x": "800",
+        "y": "4725"
+      }
+    },
+    {
+      "text": "<color=#26F7FD>Johnny:</color> Like I read a passage and I just want to <shake>TEAR DOWN A WALL</shake> from <shake>heartpounding</shake> adrenaline! \n[[Johnny19]]",
+      "links": [
+        {
+          "name": "Johnny19",
+          "link": "Johnny19",
+          "pid": "11"
+        }
+      ],
+      "name": "Johnny18",
+      "pid": "10",
+      "position": {
+        "x": "800",
+        "y": "4850"
+      }
+    },
+    {
+      "text": "<color=#26F7FD>Johnny:</color> Flowery prose is a bonus. I've been challenging myself as a reader after all.",
+      "name": "Johnny19",
+      "pid": "11",
+      "position": {
+        "x": "800",
+        "y": "4975"
+      }
+    },
+    {
       "text": "<color=#26F7FD>Johnny:</color> ...\n[[Johnny3]]",
       "links": [
         {
           "name": "Johnny3",
           "link": "Johnny3",
-          "pid": "3"
+          "pid": "13"
         }
       ],
       "name": "Johnny2",
-      "pid": "2",
+      "pid": "12",
       "position": {
         "x": "800",
         "y": "2350"
@@ -38,11 +191,11 @@
         {
           "name": "Johnny4",
           "link": "Johnny4",
-          "pid": "4"
+          "pid": "14"
         }
       ],
       "name": "Johnny3",
-      "pid": "3",
+      "pid": "13",
       "position": {
         "x": "800",
         "y": "2475"
@@ -54,11 +207,11 @@
         {
           "name": "You",
           "link": "You",
-          "pid": "11"
+          "pid": "21"
         }
       ],
       "name": "Johnny4",
-      "pid": "4",
+      "pid": "14",
       "position": {
         "x": "800",
         "y": "2600"
@@ -70,11 +223,11 @@
         {
           "name": "Johnny6",
           "link": "Johnny6",
-          "pid": "6"
+          "pid": "16"
         }
       ],
       "name": "Johnny5",
-      "pid": "5",
+      "pid": "15",
       "position": {
         "x": "800",
         "y": "2850"
@@ -86,11 +239,11 @@
         {
           "name": "Johnny7",
           "link": "Johnny7",
-          "pid": "7"
+          "pid": "17"
         }
       ],
       "name": "Johnny6",
-      "pid": "6",
+      "pid": "16",
       "position": {
         "x": "800",
         "y": "2975"
@@ -102,11 +255,11 @@
         {
           "name": "Johnny8",
           "link": "Johnny8",
-          "pid": "8"
+          "pid": "18"
         }
       ],
       "name": "Johnny7",
-      "pid": "7",
+      "pid": "17",
       "position": {
         "x": "800",
         "y": "3100"
@@ -118,11 +271,11 @@
         {
           "name": "Johnny9",
           "link": "Johnny9",
-          "pid": "9"
+          "pid": "19"
         }
       ],
       "name": "Johnny8",
-      "pid": "8",
+      "pid": "18",
       "position": {
         "x": "800",
         "y": "3225"
@@ -134,11 +287,11 @@
         {
           "name": "You2",
           "link": "You2",
-          "pid": "12"
+          "pid": "22"
         }
       ],
       "name": "Johnny9",
-      "pid": "9",
+      "pid": "19",
       "position": {
         "x": "800",
         "y": "3350"
@@ -150,11 +303,11 @@
         {
           "name": "ZanyCharacter10",
           "link": "ZanyCharacter10",
-          "pid": "15"
+          "pid": "26"
         }
       ],
       "name": "NoWay",
-      "pid": "10",
+      "pid": "20",
       "position": {
         "x": "925",
         "y": "1475"
@@ -166,11 +319,11 @@
         {
           "name": "Johnny5",
           "link": "Johnny5",
-          "pid": "5"
+          "pid": "15"
         }
       ],
       "name": "You",
-      "pid": "11",
+      "pid": "21",
       "position": {
         "x": "800",
         "y": "2725"
@@ -182,23 +335,46 @@
         {
           "name": "You3",
           "link": "You3",
-          "pid": "13"
+          "pid": "23"
         }
       ],
       "name": "You2",
-      "pid": "12",
+      "pid": "22",
       "position": {
         "x": "800",
         "y": "3475"
       }
     },
     {
-      "text": "<color=yellow>You:</color> You wanna check out a <sketchy>book</sketchy> right?",
+      "text": "<color=yellow>You:</color> You wanna check out a <sketchy>book</sketchy> right?\n[[Johnny10]]",
+      "links": [
+        {
+          "name": "Johnny10",
+          "link": "Johnny10",
+          "pid": "2"
+        }
+      ],
       "name": "You3",
-      "pid": "13",
+      "pid": "23",
       "position": {
         "x": "800",
         "y": "3600"
+      }
+    },
+    {
+      "text": "<color=yellow>You:</color>  How... <size=50%>ambitious.</size>\n\n[[Johnny15]]",
+      "links": [
+        {
+          "name": "Johnny15",
+          "link": "Johnny15",
+          "pid": "7"
+        }
+      ],
+      "name": "You4",
+      "pid": "24",
+      "position": {
+        "x": "800",
+        "y": "4350"
       }
     },
     {
@@ -207,11 +383,11 @@
         {
           "name": "ZanyCharacter2",
           "link": "ZanyCharacter2",
-          "pid": "21"
+          "pid": "32"
         }
       ],
       "name": "ZanyCharacter",
-      "pid": "14",
+      "pid": "25",
       "position": {
         "x": "800",
         "y": "350"
@@ -226,11 +402,11 @@
         {
           "name": "ZanyCharacter11",
           "link": "ZanyCharacter11",
-          "pid": "16"
+          "pid": "27"
         }
       ],
       "name": "ZanyCharacter10",
-      "pid": "15",
+      "pid": "26",
       "position": {
         "x": "800",
         "y": "1475"
@@ -242,11 +418,11 @@
         {
           "name": "ZanyCharacter12",
           "link": "ZanyCharacter12",
-          "pid": "17"
+          "pid": "28"
         }
       ],
       "name": "ZanyCharacter11",
-      "pid": "16",
+      "pid": "27",
       "position": {
         "x": "800",
         "y": "1600"
@@ -258,11 +434,11 @@
         {
           "name": "ZanyCharacter13",
           "link": "ZanyCharacter13",
-          "pid": "18"
+          "pid": "29"
         }
       ],
       "name": "ZanyCharacter12",
-      "pid": "17",
+      "pid": "28",
       "position": {
         "x": "800",
         "y": "1725"
@@ -274,11 +450,11 @@
         {
           "name": "ZanyCharacter14",
           "link": "ZanyCharacter14",
-          "pid": "19"
+          "pid": "30"
         }
       ],
       "name": "ZanyCharacter13",
-      "pid": "18",
+      "pid": "29",
       "position": {
         "x": "800",
         "y": "1850"
@@ -290,11 +466,11 @@
         {
           "name": "ZanyCharacter15",
           "link": "ZanyCharacter15",
-          "pid": "20"
+          "pid": "31"
         }
       ],
       "name": "ZanyCharacter14",
-      "pid": "19",
+      "pid": "30",
       "position": {
         "x": "800",
         "y": "1975"
@@ -310,7 +486,7 @@
         }
       ],
       "name": "ZanyCharacter15",
-      "pid": "20",
+      "pid": "31",
       "position": {
         "x": "800",
         "y": "2100"
@@ -322,11 +498,11 @@
         {
           "name": "ZanyCharacter3",
           "link": "ZanyCharacter3",
-          "pid": "22"
+          "pid": "33"
         }
       ],
       "name": "ZanyCharacter2",
-      "pid": "21",
+      "pid": "32",
       "position": {
         "x": "800",
         "y": "475"
@@ -338,11 +514,11 @@
         {
           "name": "ZanyCharacter4",
           "link": "ZanyCharacter4",
-          "pid": "23"
+          "pid": "34"
         }
       ],
       "name": "ZanyCharacter3",
-      "pid": "22",
+      "pid": "33",
       "position": {
         "x": "800",
         "y": "600"
@@ -357,11 +533,11 @@
         {
           "name": "ZanyCharacter5",
           "link": "ZanyCharacter5",
-          "pid": "24"
+          "pid": "35"
         }
       ],
       "name": "ZanyCharacter4",
-      "pid": "23",
+      "pid": "34",
       "position": {
         "x": "800",
         "y": "725"
@@ -373,11 +549,11 @@
         {
           "name": "ZanyCharacter6",
           "link": "ZanyCharacter6",
-          "pid": "25"
+          "pid": "36"
         }
       ],
       "name": "ZanyCharacter5",
-      "pid": "24",
+      "pid": "35",
       "position": {
         "x": "800",
         "y": "850"
@@ -389,11 +565,11 @@
         {
           "name": "ZanyCharacter7",
           "link": "ZanyCharacter7",
-          "pid": "26"
+          "pid": "37"
         }
       ],
       "name": "ZanyCharacter6",
-      "pid": "25",
+      "pid": "36",
       "position": {
         "x": "800",
         "y": "975"
@@ -405,11 +581,11 @@
         {
           "name": "ZanyCharacter8",
           "link": "ZanyCharacter8",
-          "pid": "27"
+          "pid": "38"
         }
       ],
       "name": "ZanyCharacter7",
-      "pid": "26",
+      "pid": "37",
       "position": {
         "x": "800",
         "y": "1100"
@@ -421,11 +597,11 @@
         {
           "name": "ZanyCharacter9",
           "link": "ZanyCharacter9",
-          "pid": "28"
+          "pid": "39"
         }
       ],
       "name": "ZanyCharacter8",
-      "pid": "27",
+      "pid": "38",
       "position": {
         "x": "800",
         "y": "1225"
@@ -437,11 +613,11 @@
         {
           "name": "NoWay",
           "link": "NoWay",
-          "pid": "10"
+          "pid": "20"
         }
       ],
       "name": "ZanyCharacter9",
-      "pid": "28",
+      "pid": "39",
       "position": {
         "x": "800",
         "y": "1350"
@@ -449,7 +625,7 @@
     }
   ],
   "name": "TestJamStory",
-  "startnode": "14",
+  "startnode": "25",
   "creator": "Tweego",
   "creator-version": "2.1.1+81d1d71",
   "ifid": "C5F0B4E0-8143-4B46-BFEF-420A2AF26283"
