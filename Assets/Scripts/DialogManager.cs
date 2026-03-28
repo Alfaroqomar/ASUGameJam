@@ -107,6 +107,8 @@ public class DialogManager : MonoBehaviour
     private Vector2 defaultArrowPos;
     private Tween arrowTween;
     private TMPWriter Writer;
+    private GameObject DropdownObj;
+    private TMP_Dropdown Dropdown;
 
     private void Awake()
     {
@@ -165,7 +167,7 @@ public class DialogManager : MonoBehaviour
         foreach (Passage passage in Passages)
         {
 
-            if (passage.tags.Contains("Options"))
+            if (passage.tags.Contains("Optionasdasds"))
             {
                 print("Setting option passages for " + passage.name);
             }
@@ -215,6 +217,11 @@ public class DialogManager : MonoBehaviour
         arrowRect = DialogArrow.GetComponent<RectTransform>();
         defaultArrowPos = arrowRect.localPosition;
         Writer = DialogText.GetComponent<TMPWriter>();
+
+        DropdownObj = Canvas.transform.Find("Tablet/Dropdown").gameObject;
+        Dropdown = DropdownObj.GetComponent<TMP_Dropdown>();
+
+
         bookGenres = new List<BookGenre>()
         {
             new BookGenre("Fantasy", new Color(0.5f, 0f, 1f), "wave"),
@@ -224,12 +231,18 @@ public class DialogManager : MonoBehaviour
             new BookGenre("Horror", new Color(0.5f, 0.5f, 0.5f), "shake")
         };
 
+        Dropdown.options.Clear();
+        for (int i = 0; i < bookGenres.Count; i++)
+        {
+            Dropdown.options.Add(new TMP_Dropdown.OptionData(bookGenres[i].name,null, bookGenres[i].color));
+        }
+
         StartCoroutine(GameState.Instance.StartingGame());
     }
 
     void Update()
     {
-        print(Writer.IsWriting);
+        //print(Writer.IsWriting);
     }
 
     public void writerStart(TMPWriter theWriter)
