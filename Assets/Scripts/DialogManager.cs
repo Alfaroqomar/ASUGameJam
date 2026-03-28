@@ -42,7 +42,7 @@ public class DialogManager : MonoBehaviour
             if (animation != "")
             {
                 this.TextString = "<" + animation + ">" + 
-                    "<color=" + color.ToHexString() + ">" + 
+                    "<color=#" + color.ToHexString() + ">" + 
                     name + "</color>" + "</>";
             }
             else
@@ -55,7 +55,29 @@ public class DialogManager : MonoBehaviour
 
     public class Book
     {
+        public GameObject bookObj;
         public List<BookGenre> genres;
+
+        public Book()
+        {
+            genres = new List<BookGenre>();
+        }
+
+        public void AddGenre(BookGenre genre)
+        {
+            genres.Add(genre);
+            //randomize genres order
+            genres = genres.OrderBy(g => Guid.NewGuid()).ToList();
+            UpdateGenreText();
+        }
+
+        private void UpdateGenreText()
+        {
+            TextMeshProUGUI genreText = bookObj.transform.Find("BookGenres").GetComponent<TextMeshProUGUI>();
+            genreText.text = string.Join("\n", genres.Select(g => g.TextString));
+        }
+
+
     }
 
     List<BookGenre> bookGenres;
@@ -116,9 +138,13 @@ public class DialogManager : MonoBehaviour
     private GameObject DropdownObj;
     private TMP_Dropdown Dropdown;
 
-    private List<BookGenre> foundBookGenres;
+    private List<BookGenre> checkListGenres;
+    private List<BookGenre> genresInDialog;
+    public List<Book> currentBooks;
     private GameObject bookTemplate;
     private GameObject tablet;
+
+
 
     private void Awake()
     {
@@ -233,7 +259,9 @@ public class DialogManager : MonoBehaviour
         DropdownObj = Canvas.transform.Find("Tablet/Dropdown").gameObject;
         Dropdown = DropdownObj.GetComponent<TMP_Dropdown>();
 
-        foundBookGenres = new List<BookGenre>();
+        checkListGenres = new List<BookGenre>();
+        currentBooks = new List<Book>();
+        genresInDialog = new List<BookGenre>();
         bookTemplate = tablet.transform.Find("BookContainer/BookTemplate").gameObject;
 
         bookGenres = new List<BookGenre>()
@@ -311,7 +339,15 @@ public class DialogManager : MonoBehaviour
 
     public void DropDownValueChanged()
     {
-        foundBookGenres.Clear();
+        checkListGenres.Clear();
+
+        foreach (Book book in currentBooks)
+        {
+            Destroy(book.bookObj);
+        }
+
+        currentBooks.Clear();
+
         if (DropdownObj.transform.Find("Dropdown List"))
         {
             print("Dropdown List found");
@@ -325,18 +361,76 @@ public class DialogManager : MonoBehaviour
                 {
                     foreach (BookGenre genre in bookGenres)
                     {
-                        if (child.name.ToLower().Contains(genre.name.ToLower()) && !foundBookGenres.Contains(genre))
+                        if (child.name.ToLower().Contains(genre.name.ToLower()) && !checkListGenres.Contains(genre))
                         {
-                            foundBookGenres.Add(genre);
+                            checkListGenres.Add(genre);
                             print("Added " + genre.name + " to found genres");
 
-                            print("Current found genres: " + string.Join(", ", foundBookGenres.Select(g => g.name)));
+                            print("Current found genres: " + string.Join(", ", checkListGenres.Select(g => g.name)));
                         }
                     }
                 }
             }
 
-            GameObject TemplateParent = bookTemplate.transform.parent.gameObject;
+            GameObject templateParent = bookTemplate.transform.parent.gameObject;
+            int bookAmount = 4;
+            int forcedBookIndex = UnityEngine.Random.Range(0, bookAmount);
+
+            for (int i = 0; i < bookAmount; i++)
+            {
+                Book newBook = new Book();
+                newBook.bookObj = Instantiate(bookTemplate, templateParent.transform);
+                newBook.bookObj.SetActive(true);
+
+                if (i == forcedBookIndex && genresInDialog.Count > 0)
+                {
+                    // Step 1: guaranteed — genresInDialog that are also in checkListGenres
+                    List<BookGenre> intersection = genresInDialog
+                        .Where(g => checkListGenres.Contains(g))
+                        .ToList();
+                    foreach (BookGenre genre in intersection)
+                        newBook.AddGenre(genre);
+
+                    // Step 2: remaining checkListGenres not already added
+                    List<BookGenre> remainingCheckList = checkListGenres
+                        .Where(g => !newBook.genres.Contains(g))
+                        .ToList();
+                    foreach (BookGenre genre in remainingCheckList)
+                    {
+                        if (newBook.genres.Count >= genresInDialog.Count) break;
+                        newBook.AddGenre(genre);
+                    }
+                }
+                else
+                {
+                    // Regular books: all checkListGenres first
+                    foreach (BookGenre genre in checkListGenres)
+                    {
+                        if (newBook.genres.Count >= genresInDialog.Count) break;
+                        newBook.AddGenre(genre);
+                    }
+                }
+
+                // All books: fill randomly up to genresInDialog.Count
+                List<BookGenre> remaining = bookGenres
+                    .Where(g => !newBook.genres.Contains(g))
+                    .ToList();
+
+                while (newBook.genres.Count < genresInDialog.Count && remaining.Count > 0)
+                {
+                    BookGenre pick = remaining[UnityEngine.Random.Range(0, remaining.Count)];
+                    newBook.AddGenre(pick);
+                    remaining.Remove(pick);
+                }
+
+                currentBooks.Add(newBook);
+            }
+
+
+
+
+
+
 
 
         } else
@@ -362,7 +456,12 @@ public class DialogManager : MonoBehaviour
         {
             if (text.ToLower().Contains(genre.name.ToLower()))
             {
-                text = text.Replace(genre.name, genre.TextString);
+                if (!genresInDialog.Contains(genre))
+                {
+                    genresInDialog.Add(genre);
+                    print("Added " + genre.name + " to genres in dialog");
+                }
+                text = text.Replace(genre.name.ToLower(), genre.TextString);
             }
         }
         return text;
