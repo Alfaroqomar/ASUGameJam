@@ -1,7 +1,7 @@
 {
   "passages": [
     {
-      "text": "<color=yellow>You:</color> (There is no way...)\n[[ZanyCharacter10]]",
+      "text": "<color=yellow>You:</color><size=50%>(There is no way...)</size>\n[[ZanyCharacter10]]",
       "links": [
         {
           "name": "ZanyCharacter10",
@@ -17,7 +17,7 @@
       }
     },
     {
-      "text": "<color=#26F7FD>???:</color> Hey boss! Things hangin' all good?\n[[ZanyCharacter2]]",
+      "text": "<color=#26F7FD>???:</color>Hey boss! Things hangin' all good?\n[[ZanyCharacter2]]",
       "links": [
         {
           "name": "ZanyCharacter2",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "text": "<color=#26F7FD>???:</color> You're clearly a <wavy>human</wavy> though right!? I can see through the mask. Ya ain't foolin' anyone!\n[[ZanyCharacter14]]",
+      "text": "<color=#26F7FD>???:</color> You're clearly a <wave>human</wave> though right!? I can see through the mask. Ya ain't foolin' anyone!\n[[ZanyCharacter14]]",
       "links": [
         {
           "name": "ZanyCharacter14",
@@ -100,7 +100,7 @@
       }
     },
     {
-      "text": "<color=#26F7FD>???:</color> Bahaha! So <wavy>sentimental!</wavy>\n[[ZanyCharacter15]]",
+      "text": "<color=#26F7FD>???:</color> Bahaha! So <wave>sentimental!</wave>\n[[ZanyCharacter15]]",
       "links": [
         {
           "name": "ZanyCharacter15",
@@ -116,7 +116,7 @@
       }
     },
     {
-      "text": "<color=#26F7FD>???:</color> I really <wavy><color=yellow>dig</color></wavy> it though! I don't think I know a single other human!",
+      "text": "<color=#26F7FD>???:</color> I really <wave><color=yellow>dig</color></wave> it though! I don't think I know a single other human!",
       "name": "ZanyCharacter15",
       "pid": "8",
       "position": {
@@ -141,7 +141,7 @@
       }
     },
     {
-      "text": "<color=#26F7FD>???:</color> Can you do me a favor? You know the <wavy>coffee machine</wavy> right?\n[[ZanyCharacter4]]",
+      "text": "<color=#26F7FD>???:</color> Can you do me a favor? You know the <wave>coffee machine</wave> right?\n[[ZanyCharacter4]]",
       "links": [
         {
           "name": "ZanyCharacter4",
@@ -208,7 +208,7 @@
       }
     },
     {
-      "text": "<color=#26F7FD>???:</color><wavy>...</wavy>\n[[ZanyCharacter8]]",
+      "text": "<color=#26F7FD>???:</color><wave>...</wave>\n[[ZanyCharacter8]]",
       "links": [
         {
           "name": "ZanyCharacter8",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "text": "<color=#26F7FD>???:</color> It just makes me <wavy><color=red>uncomfortable</red></wavy> that's all.\n[[ZanyCharacter9]]",
+      "text": "<color=#26F7FD>???:</color> It just makes me <shake><color=red>uncomfortable</color></shake> that's all.\n[[ZanyCharacter9]]",
       "links": [
         {
           "name": "ZanyCharacter9",
