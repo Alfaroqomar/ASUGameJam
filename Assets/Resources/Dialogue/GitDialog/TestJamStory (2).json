@@ -1,0 +1,264 @@
+{
+  "passages": [
+    {
+      "text": "<color=yellow>You:</color><size=50%>(There is no way...)</size>\n[[ZanyCharacter10]]",
+      "links": [
+        {
+          "name": "ZanyCharacter10",
+          "link": "ZanyCharacter10",
+          "pid": "3"
+        }
+      ],
+      "name": "NoWay",
+      "pid": "1",
+      "position": {
+        "x": "925",
+        "y": "1475"
+      }
+    },
+    {
+      "text": "<color=#26F7FD>???:</color>Hey boss! Things hangin' all good?\n[[ZanyCharacter2]]",
+      "links": [
+        {
+          "name": "ZanyCharacter2",
+          "link": "ZanyCharacter2",
+          "pid": "9"
+        }
+      ],
+      "name": "ZanyCharacter",
+      "pid": "2",
+      "position": {
+        "x": "800",
+        "y": "350"
+      },
+      "tags": [
+        "Intro"
+      ]
+    },
+    {
+      "text": "<color=yellow>You:</color> Look, it's a memento. It's important to me.\n[[ZanyCharacter11]]",
+      "links": [
+        {
+          "name": "ZanyCharacter11",
+          "link": "ZanyCharacter11",
+          "pid": "4"
+        }
+      ],
+      "name": "ZanyCharacter10",
+      "pid": "3",
+      "position": {
+        "x": "800",
+        "y": "1475"
+      }
+    },
+    {
+      "text": "<color=yellow>You:</color> I can hide it a bit if it lets you sleep at night better. I can't make that many accomodations though. Sorry! \n[[ZanyCharacter12]]",
+      "links": [
+        {
+          "name": "ZanyCharacter12",
+          "link": "ZanyCharacter12",
+          "pid": "5"
+        }
+      ],
+      "name": "ZanyCharacter11",
+      "pid": "4",
+      "position": {
+        "x": "800",
+        "y": "1600"
+      }
+    },
+    {
+      "text": "<color=yellow>You:</color> If there's anything else I can help you with I can assist.\n[[ZanyCharacter13]]",
+      "links": [
+        {
+          "name": "ZanyCharacter13",
+          "link": "ZanyCharacter13",
+          "pid": "6"
+        }
+      ],
+      "name": "ZanyCharacter12",
+      "pid": "5",
+      "position": {
+        "x": "800",
+        "y": "1725"
+      }
+    },
+    {
+      "text": "<color=#26F7FD>???:</color> You're clearly a <wave>human</wave> though right!? I can see through the mask. Ya ain't foolin' anyone!\n[[ZanyCharacter14]]",
+      "links": [
+        {
+          "name": "ZanyCharacter14",
+          "link": "ZanyCharacter14",
+          "pid": "7"
+        }
+      ],
+      "name": "ZanyCharacter13",
+      "pid": "6",
+      "position": {
+        "x": "800",
+        "y": "1850"
+      }
+    },
+    {
+      "text": "<color=#26F7FD>???:</color> Bahaha! So <wave>sentimental!</wave>\n[[ZanyCharacter15]]",
+      "links": [
+        {
+          "name": "ZanyCharacter15",
+          "link": "ZanyCharacter15",
+          "pid": "8"
+        }
+      ],
+      "name": "ZanyCharacter14",
+      "pid": "7",
+      "position": {
+        "x": "800",
+        "y": "1975"
+      }
+    },
+    {
+      "text": "<color=#26F7FD>???:</color> I really <wave><color=yellow>dig</color></wave> it though! I don't think I know a single other human!",
+      "name": "ZanyCharacter15",
+      "pid": "8",
+      "position": {
+        "x": "800",
+        "y": "2100"
+      }
+    },
+    {
+      "text": "<color=yellow>You:</color> Y... yea?\n[[ZanyCharacter3]]",
+      "links": [
+        {
+          "name": "ZanyCharacter3",
+          "link": "ZanyCharacter3",
+          "pid": "10"
+        }
+      ],
+      "name": "ZanyCharacter2",
+      "pid": "9",
+      "position": {
+        "x": "800",
+        "y": "475"
+      }
+    },
+    {
+      "text": "<color=#26F7FD>???:</color> Can you do me a favor? You know the <wave>coffee machine</wave> right?\n[[ZanyCharacter4]]",
+      "links": [
+        {
+          "name": "ZanyCharacter4",
+          "link": "ZanyCharacter4",
+          "pid": "11"
+        }
+      ],
+      "name": "ZanyCharacter3",
+      "pid": "10",
+      "position": {
+        "x": "800",
+        "y": "600"
+      },
+      "tags": [
+        "BookQuery"
+      ]
+    },
+    {
+      "text": "<color=yellow>You:</color> The coffee machine at the back? I swore I got that fixed.\n[[ZanyCharacter5]]",
+      "links": [
+        {
+          "name": "ZanyCharacter5",
+          "link": "ZanyCharacter5",
+          "pid": "12"
+        }
+      ],
+      "name": "ZanyCharacter4",
+      "pid": "11",
+      "position": {
+        "x": "800",
+        "y": "725"
+      }
+    },
+    {
+      "text": "<color=yellow>You:</color> Is it out of coffee pods or something?\n[[ZanyCharacter6]]",
+      "links": [
+        {
+          "name": "ZanyCharacter6",
+          "link": "ZanyCharacter6",
+          "pid": "13"
+        }
+      ],
+      "name": "ZanyCharacter5",
+      "pid": "12",
+      "position": {
+        "x": "800",
+        "y": "850"
+      }
+    },
+    {
+      "text": "<color=#26F7FD>???:</cyan> No no no! It's just...\n[[ZanyCharacter7]]",
+      "links": [
+        {
+          "name": "ZanyCharacter7",
+          "link": "ZanyCharacter7",
+          "pid": "14"
+        }
+      ],
+      "name": "ZanyCharacter6",
+      "pid": "13",
+      "position": {
+        "x": "800",
+        "y": "975"
+      }
+    },
+    {
+      "text": "<color=#26F7FD>???:</color><wave>...</wave>\n[[ZanyCharacter8]]",
+      "links": [
+        {
+          "name": "ZanyCharacter8",
+          "link": "ZanyCharacter8",
+          "pid": "15"
+        }
+      ],
+      "name": "ZanyCharacter7",
+      "pid": "14",
+      "position": {
+        "x": "800",
+        "y": "1100"
+      }
+    },
+    {
+      "text": "<color=#26F7FD>???:</color> It just makes me <shake><color=red>uncomfortable</color></shake> that's all.\n[[ZanyCharacter9]]",
+      "links": [
+        {
+          "name": "ZanyCharacter9",
+          "link": "ZanyCharacter9",
+          "pid": "16"
+        }
+      ],
+      "name": "ZanyCharacter8",
+      "pid": "15",
+      "position": {
+        "x": "800",
+        "y": "1225"
+      }
+    },
+    {
+      "text": "<color=yellow>You:</color> ...\n[[NoWay]]",
+      "links": [
+        {
+          "name": "NoWay",
+          "link": "NoWay",
+          "pid": "1"
+        }
+      ],
+      "name": "ZanyCharacter9",
+      "pid": "16",
+      "position": {
+        "x": "800",
+        "y": "1350"
+      }
+    }
+  ],
+  "name": "TestJamStory",
+  "startnode": "2",
+  "creator": "Tweego",
+  "creator-version": "2.1.1+81d1d71",
+  "ifid": "C5F0B4E0-8143-4B46-BFEF-420A2AF26283"
+}
