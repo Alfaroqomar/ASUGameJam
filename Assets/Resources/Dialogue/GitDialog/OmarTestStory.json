@@ -1,0 +1,69 @@
+{
+  "passages": [
+    {
+      "text": "<color=lightblue>???</color>: YO! <!wait=1.5> I need a book dude.\n[[TestCharacter2]]",
+      "links": [
+        {
+          "name": "TestCharacter2",
+          "link": "TestCharacter2",
+          "pid": "2"
+        }
+      ],
+      "name": "TestCharacter",
+      "pid": "1",
+      "position": {
+        "x": "800",
+        "y": "350"
+      }
+    },
+    {
+      "text": "<color=lightblue>???</color>: I really like horror books, sometimes fantasy books too.\n[[TestCharacter3]]",
+      "links": [
+        {
+          "name": "TestCharacter3",
+          "link": "TestCharacter3",
+          "pid": "3"
+        }
+      ],
+      "name": "TestCharacter2",
+      "pid": "2",
+      "position": {
+        "x": "800",
+        "y": "475"
+      }
+    },
+    {
+      "text": "<color=lightblue>???</color>: but I <b>LOVE</b> me some mystery.\n[[TestCharacter4]]",
+      "links": [
+        {
+          "name": "TestCharacter4",
+          "link": "TestCharacter4",
+          "pid": "4"
+        }
+      ],
+      "name": "TestCharacter3",
+      "pid": "3",
+      "position": {
+        "x": "800",
+        "y": "600"
+      }
+    },
+    {
+      "text": "You found a book yet?",
+      "name": "TestCharacter4",
+      "pid": "4",
+      "position": {
+        "x": "800",
+        "y": "725"
+      },
+      "tags": [
+        "BookQuery"
+      ]
+    }
+  ],
+  "name": "OmarTestStory",
+  "startnode": "1",
+  "creator": "Tweego",
+  "creator-version": "2.1.1+81d1d71",
+  "ifid": "D0F932C7-37A1-4574-828A-977E2617EB32"
+}
