@@ -6,11 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/NovelEthanScene.unity
-    guid: 0ad2213171abd5f4fa3005db2ccc058c
+    path: Assets/Scenes/NovelScene.unity
+    guid: 57648b8a1b96bc44ba2fc600b10c26e5
   - enabled: 1
     path: Assets/Scenes/Platforming.unity
     guid: fa6e9ae10ad68c340810ce3aff09967f
+  - enabled: 1
+    path: Assets/Scenes/AnotherTestScene.unity
+    guid: c9b9feaca9ebc4d49b70f23213d1735a
+  - enabled: 1
+    path: Assets/Scenes/NovelEthanScene.unity
+    guid: 0ad2213171abd5f4fa3005db2ccc058c
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
