@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 09706729c4bdb594f858f4f9b84bc9fc
+guid: ff2671a9a56a79e43b8402fd74546812
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1057178709104980310
-    second: robot_presley 1_0
+      213: 1457768619890422051
+    second: undertale_act_button_png_by_gengarghast_dgt8wxa-375w-2x_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: robot_presley 1_0
+      name: undertale_act_button_png_by_gengarghast_dgt8wxa-375w-2x_0
       rect:
         serializedVersion: 2
-        x: 7
+        x: 0
         y: 0
-        width: 57
-        height: 64
+        width: 534
+        height: 190
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aae01b3b0952451f0800000000000000
-      internalID: -1057178709104980310
+      spriteID: 321b74116d80b3410800000000000000
+      internalID: 1457768619890422051
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      robot_presley 1_0: -1057178709104980310
+      undertale_act_button_png_by_gengarghast_dgt8wxa-375w-2x_0: 1457768619890422051
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
