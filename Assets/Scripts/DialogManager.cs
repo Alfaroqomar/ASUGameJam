@@ -484,5 +484,61 @@ public class DialogManager : MonoBehaviour
         DialogArrow.transform.localPosition = defaultArrowPos; // Reset position before starting animation
     }
 
+    public void bookClicked(GameObject clickedObj)
+    {
+        //loop thru books and check their bookObjs, if matches and genre matches genresInDialog, print correct or incorrect
+        Book clickedBook = currentBooks.FirstOrDefault(b => b.bookObj == clickedObj);
+        if (clickedBook != null) {
+            bool correct = true;
+            foreach (BookGenre genre in clickedBook.genres)
+            {
+                if (!genresInDialog.Contains(genre))
+                {
+                    correct = false;
+                    break;
+                }
+            }
+
+            if (correct)
+            {
+                print("Correct book clicked!");
+                //show popup for correct book
+                Canvas.transform.Find("CorrectBookPopup").gameObject.SetActive(true);
+
+            }
+            else
+            {
+                print("Incorrect book clicked.");
+
+            }
+        }
+    }
+
+    public void BookPointerEntered(GameObject bookObj)
+    {
+        //get outline color and make yellow
+        Outline bookOutline = bookObj.GetComponent<Outline>();
+        if (bookOutline != null)
+        {
+            bookOutline.effectColor = Color.yellow;
+        }
+
+    }
+
+    public void BookPointerExited(GameObject bookObj)
+    {
+        Outline bookOutline = bookObj.GetComponent<Outline>();
+        if (bookOutline != null)
+        {
+            bookOutline.effectColor = Color.black;
+        }
+    }
+
+    public void GoToGameEndScreen()
+    {
+        //load end screen scene
+        UnityEngine.SceneManagement.SceneManager.LoadScene("EndScreen");
+    }
+
 
 }
