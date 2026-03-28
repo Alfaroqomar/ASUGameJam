@@ -53,6 +53,11 @@ public class DialogManager : MonoBehaviour
 
     }
 
+    public class Book
+    {
+        public List<BookGenre> genres;
+    }
+
     List<BookGenre> bookGenres;
 
         public static event Action<string> DialogueDone;
@@ -112,6 +117,8 @@ public class DialogManager : MonoBehaviour
     private TMP_Dropdown Dropdown;
 
     private List<BookGenre> foundBookGenres;
+    private GameObject bookTemplate;
+    private GameObject tablet;
 
     private void Awake()
     {
@@ -222,10 +229,12 @@ public class DialogManager : MonoBehaviour
         defaultArrowPos = arrowRect.localPosition;
         Writer = DialogText.GetComponent<TMPWriter>();
 
+        tablet = Canvas.transform.Find("Tablet").gameObject;
         DropdownObj = Canvas.transform.Find("Tablet/Dropdown").gameObject;
         Dropdown = DropdownObj.GetComponent<TMP_Dropdown>();
 
         foundBookGenres = new List<BookGenre>();
+        bookTemplate = tablet.transform.Find("BookContainer/BookTemplate").gameObject;
 
         bookGenres = new List<BookGenre>()
         {
@@ -326,6 +335,10 @@ public class DialogManager : MonoBehaviour
                     }
                 }
             }
+
+            GameObject TemplateParent = bookTemplate.transform.parent.gameObject;
+
+
         } else
         {
             print("Dropdown List not found");
@@ -344,10 +357,13 @@ public class DialogManager : MonoBehaviour
     private String ProcessText(String text)
     {
         //replace all mentions of a genre with a random genre from the list of genres
-        text = text.ToLower();
+        //this might ignore lower, should use index
         foreach (BookGenre genre in bookGenres)
         {
-            text = text.Replace(genre.name.ToLower(), genre.TextString);
+            if (text.ToLower().Contains(genre.name.ToLower()))
+            {
+                text = text.Replace(genre.name, genre.TextString);
+            }
         }
         return text;
     }
