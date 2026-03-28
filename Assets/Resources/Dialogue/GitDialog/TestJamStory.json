@@ -1,7 +1,7 @@
 {
   "passages": [
     {
-      "text": "(text-colour:cyan)[???:] Hey boss! Things hangin' all good?\n[[ZanyCharacter2]]",
+      "text": "<color=cyan>???:</cyan> Hey boss! Things hangin' all good?\n[[ZanyCharacter2]]",
       "links": [
         {
           "name": "ZanyCharacter2",
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "text": "Look, it's a memento. It's important to me.[[ZanyCharacter11]]",
+      "text": "<color=yellow>You:</color> Look, it's a memento. It's important to me.\n[[ZanyCharacter11]]",
       "links": [
         {
           "name": "ZanyCharacter11",
@@ -36,7 +36,7 @@
       }
     },
     {
-      "text": "I can hide it a bit if it lets you sleep at night better. I can't make that many accomodations. [[ZanyCharacter12]]",
+      "text": "<color=yellow>You:</color> I can hide it a bit if it lets you sleep at night better. I can't make that many accomodations though. Sorry! \n[[ZanyCharacter12]]",
       "links": [
         {
           "name": "ZanyCharacter12",
@@ -52,7 +52,7 @@
       }
     },
     {
-      "text": "If there's anything else I can help you with I can assist. [[ZanyCharacter13]]",
+      "text": "<color=yellow>You:</color> If there's anything else I can help you with I can assist.\n[[ZanyCharacter13]]",
       "links": [
         {
           "name": "ZanyCharacter13",
@@ -68,7 +68,7 @@
       }
     },
     {
-      "text": "(text-colour:cyan)[???:] You're clearly a human though right!? I can see through the mask. Ya ain't foolin' anyone![[ZanyCharacter14]]",
+      "text": "<color=cyan>???:</cyan> You're clearly a human though right!? I can see through the mask. Ya ain't foolin' anyone!\n[[ZanyCharacter14]]",
       "links": [
         {
           "name": "ZanyCharacter14",
@@ -84,7 +84,7 @@
       }
     },
     {
-      "text": "(text-colour:cyan)[???:] Bahaha! So sentimental! [[ZanyCharacter15]]",
+      "text": "<color=cyan>???:</cyan> Bahaha! So sentimental! \n[[ZanyCharacter15]]",
       "links": [
         {
           "name": "ZanyCharacter15",
@@ -100,7 +100,7 @@
       }
     },
     {
-      "text": "(text-colour:cyan)[???:] I really dig it though! I don't think I know a single other human!",
+      "text": "<color=cyan>???:</cyan> I really dig it though! I don't think I know a single other human!",
       "name": "ZanyCharacter15",
       "pid": "7",
       "position": {
@@ -109,7 +109,7 @@
       }
     },
     {
-      "text": "Y... yea? \n[[ZanyCharacter3]]",
+      "text": "<color=yellow>You:</color> Y... yea?\n[[ZanyCharacter3]]",
       "links": [
         {
           "name": "ZanyCharacter3",
@@ -125,7 +125,7 @@
       }
     },
     {
-      "text": "(text-colour:cyan)[???:] Can you do me a favor? You know the coffee machine right?\n[[ZanyCharacter4]]",
+      "text": "<color>???:</color> Can you do me a favor? You know the coffee machine right?\n[[ZanyCharacter4]]",
       "links": [
         {
           "name": "ZanyCharacter4",
@@ -144,7 +144,7 @@
       ]
     },
     {
-      "text": "The coffee machine at the back? I swore I got that fixed.[[ZanyCharacter5]]",
+      "text": "<color=yellow>You:</color> The coffee machine at the back? I swore I got that fixed.\n[[ZanyCharacter5]]",
       "links": [
         {
           "name": "ZanyCharacter5",
@@ -160,7 +160,7 @@
       }
     },
     {
-      "text": "Is it out of coffee pods or something?[[ZanyCharacter6]]",
+      "text": "<color=yellow>You:</color> Is it out of coffee pods or something?\n[[ZanyCharacter6]]",
       "links": [
         {
           "name": "ZanyCharacter6",
@@ -176,7 +176,7 @@
       }
     },
     {
-      "text": "(text-colour:cyan)[???:] No no no! It's just...[[ZanyCharacter7]]",
+      "text": "<color=cyan>???:</cyan> No no no! It's just...\n[[ZanyCharacter7]]",
       "links": [
         {
           "name": "ZanyCharacter7",
@@ -192,7 +192,7 @@
       }
     },
     {
-      "text": "(text-colour:cyan)[???:] ...[[ZanyCharacter8]]",
+      "text": "<color=cyan>???:</cyan>...\n[[ZanyCharacter8]]",
       "links": [
         {
           "name": "ZanyCharacter8",
@@ -208,7 +208,7 @@
       }
     },
     {
-      "text": "(text-colour:cyan)[???:] It just makes me uncomfortable that's all.[[ZanyCharacter9]]",
+      "text": "<color=cyan>???:</cyan> It just makes me uncomfortable that's all.\n[[ZanyCharacter9]]",
       "links": [
         {
           "name": "ZanyCharacter9",
@@ -224,7 +224,7 @@
       }
     },
     {
-      "text": "...[[ZanyCharacter10]]",
+      "text": "<color=yellow>You:</color> ...\n[[ZanyCharacter10]]",
       "links": [
         {
           "name": "ZanyCharacter10",
