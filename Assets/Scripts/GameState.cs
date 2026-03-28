@@ -106,7 +106,7 @@ public class GameState : MonoBehaviour
             yield return null; // Wait until the next frame
         }
 
-        NewNPCEnters("ZanyCharacter");
+        NewNPCEnters("TestCharacter");
         //DialogManager.Instance.ActivateDialog("ZanyCharacter");
     }
 
