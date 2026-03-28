@@ -208,7 +208,6 @@ public class DialogManager : MonoBehaviour
         }
 
 
-
         defaultWaitTime = 0.025f;
         waitTime = defaultWaitTime;
 
