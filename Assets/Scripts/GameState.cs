@@ -27,7 +27,7 @@ public class GameState : MonoBehaviour
     public Ease WalkXEase = Ease.InOutSine;
     public Ease WalkYEase = Ease.InOutBack;
     public Ease ColorEase = Ease.InQuart;
-    public bool Debug = true;
+    public bool Debug = false;
     private bool personInFrame = false;
 
     private void Awake()
@@ -47,7 +47,6 @@ public class GameState : MonoBehaviour
 
     void Start()
     {
-        Debug = true;
         if (Debug)
         {
             TravelTime = 0.5f;
